@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -11,8 +11,7 @@ body {
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
-  font-family: 'Josefin Sans', sans-serif;
-
+  font-family: "Josefin Sans", sans-serif;
 }
 .header-container {
   color: white;
@@ -20,11 +19,11 @@ body {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-.header-container h1{
+.header-container h1 {
   font-size: 50px;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-  font-family: 'Dancing Script', cursive !important;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  font-family: "Dancing Script", cursive !important;
 }
 .lolly-list {
   display: flex;
@@ -107,7 +106,7 @@ body {
   padding: 0px 0 4px 0;
   text-transform: capitalize;
 }
-.btn-wrapper{
+.btn-wrapper {
   margin-top: 50px;
   text-align: center;
 }
@@ -127,20 +126,19 @@ body {
 
   color: black;
 }
-.formBtn-wrapper{
+.formBtn-wrapper {
   margin-top: 10px;
 }
-.formBtn-wrapper button{
+.formBtn-wrapper button {
   width: 80px;
   height: 30px;
   text-transform: capitalize;
   font-size: 16px;
   border: none;
-  background-color:#c912da ;
+  background-color: #c912da;
   color: white;
   cursor: pointer;
 }
-
 
 .freezedLollyCardWrapper {
   display: flex;
@@ -198,4 +196,7 @@ body {
 .loderWrapper {
   text-align: center;
   margin-top: 100px;
+}
+#gif {
+  height: 100vh;
 }
