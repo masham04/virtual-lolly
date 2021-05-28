@@ -16,12 +16,15 @@
   "dependencies": {
     "@apollo/client": "^3.3.19",
     "apollo-server-lambda": "^2.24.1",
+    "axios": "^0.21.1",
     "faunadb": "^4.3.0",
     "formik": "^2.2.8",
     "gatsby": "^3.6.0",
+    "gatsby-source-graphql": "^3.6.0",
     "graphql": "^15.5.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "shortid": "^2.2.16"
   },
   "devDependencies": {
     "prettier": "2.2.1"

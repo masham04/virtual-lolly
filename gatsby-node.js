@@ -1,9 +1,23 @@
-exports.onCreatePage = async ({ page, actions }) => {
-    const { createPage } = actions;
+const path = require(`path`)
 
-    if (page.path.match(/^\/lollies/)) {
-        console.log("Page Created")
-        page.matchPath = "/lollies/*";
-        createPage(page);
+exports.createPages = async ({ actions, graphql }) => {
+    const { data } = await graphql(`
+    query MyQuery {
+      Lollies {
+        getAllLollies {
+          lollyPath
+        }
+      }
     }
+  `)
+    console.log(data);
+    data.Lollies.getAllLollies.forEach(({ lollyPath }) => {
+        actions.createPage({
+            path: `lollies/${lollyPath}`,
+            component: path.resolve(`./src/components/dynamicPage/template.tsx`),
+            context: {
+                lollyPath: lollyPath,
+            },
+        })
+    })
 }
