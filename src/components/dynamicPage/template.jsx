@@ -1,5 +1,5 @@
 import React from "react"
-import Lolly from "../lolly/index"
+import Lolly from "../Lolly/index"
 import gql from "graphql-tag"
 import Header from "../header"
 import { Link } from "gatsby"
@@ -19,13 +19,12 @@ export const query = gql`
   }
 `
 
-export default function LollyPage({ pathContext: { lollyPath  } }) {
+const LollyPage = ({ pathContext: { lollyPath } }) => {
   const { data, loading, error } = useQuery(query, {
     variables: { lollyPath: lollyPath },
   })
-  console.log(data);
-  
-  
+  console.log(data)
+
   if (error) {
     return <h4>error</h4>
   }
@@ -36,7 +35,7 @@ export default function LollyPage({ pathContext: { lollyPath  } }) {
         <div>
           <h4>Loading</h4>
         </div>
-      ) : data !== undefined || null && data.bookmarks.length !== 0 ? (
+      ) : data !== undefined || (null && data.bookmarks.length !== 0) ? (
         <div className="freezedLollyCardWrapper">
           <Lolly
             fillLollyTop={data.getLollyByPath?.flavourTop}
@@ -70,3 +69,5 @@ export default function LollyPage({ pathContext: { lollyPath  } }) {
     </div>
   )
 }
+
+export default LollyPage
