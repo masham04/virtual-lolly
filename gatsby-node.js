@@ -1,7 +1,7 @@
 const path = require(`path`)
 
 exports.createPages = async ({ actions, graphql }) => {
-    const { data } = await graphql(`
+  const { data } = await graphql(`
     query MyQuery {
       Lollies {
         getAllLollies {
@@ -10,14 +10,13 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     }
   `)
-    console.log(data);
-    data.Lollies.getAllLollies.forEach(({ lollyPath }) => {
-        actions.createPage({
-            path: `lollies/${lollyPath}`,
-            component: path.resolve(`./src/components/dynamicPage/template.tsx`),
-            context: {
-                lollyPath: lollyPath,
-            },
-        })
+  data.Lollies.getAllLollies.forEach(({ lollyPath }) => {
+    actions.createPage({
+      path: `lollies/${lollyPath}`,
+      component: path.resolve(`./src/components/dynamicPage/template.jsx`),
+      context: {
+        lollyPath: lollyPath,
+      },
     })
+  })
 }

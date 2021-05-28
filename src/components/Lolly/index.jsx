@@ -1,12 +1,6 @@
 import React from "react"
 
-interface props {
-    fillLollyTop: string | undefined;
-    fillLollyMiddle: string | undefined;
-    fillLollyBottom: string | undefined;
-  }
-
-  const Lolly: React.FC<props> = ({fillLollyTop , fillLollyMiddle , fillLollyBottom}) =>  {
+  const Lolly = ({fillLollyTop , fillLollyMiddle , fillLollyBottom}) =>  {
     
   return (
     <svg
