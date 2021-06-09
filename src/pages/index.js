@@ -30,7 +30,7 @@ export default function Home() {
         />
       </div>
       <div className='btn-wrapper'>
-        <button className='' onClick={() => navigate('/createNew')}>Make a new lolly to send to a friend</button>
+        <button onClick={() => navigate('/createNew')}>Make a new lolly to send to a friend</button>
       </div>
     </div>
   )

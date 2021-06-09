@@ -19,7 +19,7 @@ const typeDefs = gql`
     message: String!
     flavorTop: String!
     flavorMid: String!
-    flavorBott: String!
+    flavorBot: String!
     lollyPath: String!
   }
   type Mutation {
@@ -44,7 +44,7 @@ const resolvers = {
           q.Lambda(x => q.Get(x))
         )
       )
-      console.log(result)
+
       return result.data.map(d => {
         return {
           recipientName: d.data.recipientName,
