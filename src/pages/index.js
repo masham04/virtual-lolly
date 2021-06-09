@@ -1,5 +1,4 @@
 import React from "react"
-import Header from "../components/header"
 import Lolly from "../components/Lolly"
 import { navigate } from 'gatsby'
 
@@ -7,7 +6,7 @@ export default function Home() {
 
   return (
     <div className='container'>
-      <Header />
+      <h1 className='heading'>Virtual LollyPop</h1>
       <div className='lolly-list'>
         <Lolly
           fillLollyTop="#6b6bde"

@@ -19,7 +19,7 @@ const typeDefs = gql`
     message: String!
     flavorTop: String!
     flavorMid: String!
-    flavorBot: String!
+    flavorBott: String!
     lollyPath: String!
   }
   type Mutation {
