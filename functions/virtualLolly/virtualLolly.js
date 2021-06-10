@@ -1,6 +1,7 @@
 const { ApolloServer, gql } = require("apollo-server-lambda")
 const faunadb = require("faunadb")
 q = faunadb.query
+
 axios = require("axios"),
   require("dotenv").config()
 
@@ -44,7 +45,7 @@ const resolvers = {
           q.Lambda(x => q.Get(x))
         )
       )
-
+      console.log(result)
       return result.data.map(d => {
         return {
           recipientName: d.data.recipientName,
