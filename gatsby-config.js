@@ -6,7 +6,7 @@ module.exports = {
       options: {
         typeName: "Lolly",
         fieldName: "getAllLollies",
-        url: "https://mm-virtual-lolly.netlify.app/.netlify/functions/virtualLolly",
+        url: "https://mm-virtual-lolly.netlify.app/.netlify/functions/GraphQL",
       },
     },
   ],

@@ -2,7 +2,6 @@ import React from "react"
 import gql from "graphql-tag"
 import { Router } from '@reach/router'
 import Lolly from './newLolly';
-// import { Link } from "gatsby"
 import { useQuery } from "@apollo/client"
 
 const GET_LOLLY = gql`
