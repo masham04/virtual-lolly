@@ -1,8 +1,8 @@
 import React from "react"
 import gql from "graphql-tag"
-import Lolly from '../components/Lolly';
+import Lolly from './newLolly';
 import { useQuery } from "@apollo/client"
-import { navigate } from 'gatsby'
+import { Router } from '@reach/router'
 
 const GET_LOLLY = gql`
 query MyQuery {
@@ -20,10 +20,10 @@ query MyQuery {
   }
 `;
 export default function LollyPage({ params, location }) {
-  console.log(location)
+
   var obj = params
   var id = obj[Object.keys(obj)[0]];
-  console.log(id)
+
 
   const { data, loading, error } = useQuery(GET_LOLLY)
   if (loading) {
@@ -34,13 +34,17 @@ export default function LollyPage({ params, location }) {
   }
   const objects = data.getAllLollies
   const path = objects.find((el) => el.lollyPath === id)
-  console.log(path)
+
 
   return (
     <div>
+      <Router basepath="/lollies">
 
+        <Lolly pageContext={path} path={`/${id}`}> </Lolly>
 
-      <div className="container">
+      </Router>
+
+      {/* <div className="container">
         <h2 className='heading'>SHARE THIS LOLLY TO YOUR FRIEND</h2>
         <div className="lollyContainer">
           <div>
@@ -68,7 +72,7 @@ export default function LollyPage({ params, location }) {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
 
   )
