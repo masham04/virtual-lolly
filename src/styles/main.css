@@ -3,6 +3,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   background-color: #1a202c;
+  color: aqua;
 }
 * {
   margin: 0;
@@ -81,6 +82,7 @@ body {
   border-radius: 8px;
   width: 100%;
   max-width: 330px;
+  margin-left: 20px;
 }
 .formContainer input,
 .formContainer textarea {
