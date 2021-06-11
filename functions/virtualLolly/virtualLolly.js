@@ -45,7 +45,7 @@ const resolvers = {
           q.Lambda(x => q.Get(x))
         )
       )
-      console.log(result)
+
       return result.data.map(d => {
         return {
           recipientName: d.data.recipientName,
@@ -64,7 +64,9 @@ const resolvers = {
         var result = await client.query(
           q.Get(q.Match(q.Index("lolly_by_slug"), lollyPath))
         )
+        console.log(result.data)
         return result.data
+
       } catch (e) {
         return e.toString()
       }
