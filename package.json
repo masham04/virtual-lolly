@@ -21,6 +21,7 @@
     "faunadb": "^4.3.0",
     "formik": "^2.2.8",
     "gatsby": "^3.6.0",
+    "gatsby-source-graphql": "^3.7.1",
     "graphql": "^15.5.0",
     "graphql-tag": "^2.12.4",
     "react": "^17.0.1",
