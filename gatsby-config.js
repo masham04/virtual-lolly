@@ -9,7 +9,7 @@ module.exports = {
         // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
         fieldName: "getAllLollies",
         // Url to query from
-        url: "https://mm-virtual-lolly.netlify.app//.netlify/functions/GraphQL",
+        url: "https://mm-virtual-lolly.netlify.app//.netlify/functions/virtualLolly",
       },
     },
   ],
