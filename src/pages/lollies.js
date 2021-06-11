@@ -1,8 +1,9 @@
 import React from "react"
 import gql from "graphql-tag"
-import Lolly from './newLolly';
+import Lolly from '../components/Lolly';
 import { useQuery } from "@apollo/client"
-import { Router } from '@reach/router'
+import { navigate } from 'gatsby'
+// import { Router } from '@reach/router'
 
 const GET_LOLLY = gql`
 query MyQuery {
@@ -38,13 +39,13 @@ export default function LollyPage({ params, location }) {
 
   return (
     <div>
-      <Router basepath="/lollies">
+      {/* <Router basepath="/lollies">
 
         <Lolly pageContext={path} path={`/${id}`}> </Lolly>
 
-      </Router>
+      </Router> */}
 
-      {/* <div className="container">
+      <div className="container">
         <h2 className='heading'>SHARE THIS LOLLY TO YOUR FRIEND</h2>
         <div className="lollyContainer">
           <div>
@@ -63,16 +64,16 @@ export default function LollyPage({ params, location }) {
             <br /><br /><br />
             <h3>Hi {path.recipientName}</h3>
             <h1 style={{ textAlign: 'center' }}>{path.message}</h1>
-            <br /><br/><br/><br/>
+            <br /><br /><br /><br />
             <h3 style={{ float: 'right' }}>From {path.sendersName}</h3>
-            <br /><br/><br/><br/><br/>
+            <br /><br /><br /><br /><br />
             <p onClick={() => navigate('/')} to='/'
               style={{ textDecoration: 'none', color: '#ffff', cursor: 'pointer' }}>
               Go Back
             </p>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
 
   )
